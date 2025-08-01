@@ -101,10 +101,10 @@ class Common:
         self.logger.info(f"Running function: {func.__name__} and returning status.")
         try:
             func(*args, **kwargs)
-            self.logger.info("Function {func.__name__} Return: True")
+            self.logger.info(f"Function {func.__name__} Return: True")
             return True
         except Exception as e:
-            self.logger.info("Function {func.__name__} Return: False")
+            self.logger.info(f"Function {func.__name__} Return: False")
             return False
         
     def run_keyword_and_ignore_error(self, func, *args, **kwargs):
